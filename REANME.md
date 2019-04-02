@@ -57,11 +57,9 @@ User --> (Use the application) : A small label
             5：查询书籍信息，查询是否过期或者是否可借，并做相关操作
             6：删除书籍查询
 ##     3. 用例规约表
-|Tables|Are|Cool|
-|:--|:--|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+|学号|班级|姓名|照片|
+|:-------:|:-------------: | :----------:|:---:|
+|12345678|软件(本)15-4|赵卫东|![flow1](a2.jpg)|
 
 作者：lgy_gg
 链接：https://www.jianshu.com/p/4705a1dc8e5a
