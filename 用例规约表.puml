@@ -1,0 +1,13 @@
+@startuml
+usecase UC1 as "You can use
+several lines to define your usecase.
+You can also use separators.
+an also use separators
+__
+Several separators are possible.
+__
+And you can add titles:
+..Conclusion..
+This allows large description."
+
+@enduml

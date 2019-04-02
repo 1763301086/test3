@@ -1,0 +1,45 @@
+@startuml
+left to right direction
+actor 借阅者
+rectangle checkout {
+借阅者 --> (登录)
+借阅者 --> (书籍查询)
+借阅者 --> (书籍预定)
+借阅者 --> (查询借阅信息)
+借阅者 --> (借书)
+借阅者 --> (续借)
+借阅者 --> (还书)
+登录-down.>(登录验证):<< include >>
+(缴纳罚金)-up.>(还书):<<extend>>
+}
+newpage
+actor 系统管理员
+rectangle checkout {
+left to right direction
+系统管理员 --> (登录)
+系统管理员 --> (查询读者信息)
+系统管理员 --> (查询书籍信息)
+系统管理员 --> (删除或更新书目)
+系统管理员 --> (增加书目)
+系统管理员 --> (增加书籍)
+系统管理员 --> (删除书籍)
+系统管理员 --> (增加读者信息)
+系统管理员 --> (删除或更新账户)
+登录-down.>(登录验证):<< include >>
+}
+newpage
+actor 图书管理员
+rectangle checkout {
+left to right direction
+图书管理员 --> (登录系统)
+图书管理员 --> (书籍借阅信息)
+图书管理员 --> (书籍归还处理)
+图书管理员 --> (书籍续借处理)
+图书管理员 --> (查询书籍信息)
+图书管理员 --> (删除书籍借阅信息)
+(收取罚金)-down.>(书籍归还处理):<< extend >>
+登录系统-down.>(登录验证):<< include >>
+查询书籍信息-down.>(查询是否过期):<< include >>
+查询书籍信息-down.>(查询是否可借):<< include >>
+}
+@enduml
